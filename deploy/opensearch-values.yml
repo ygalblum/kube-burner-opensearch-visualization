@@ -1,0 +1,8 @@
+config:
+  opensearch.yml: |-
+    cluster.name: opensearch-cluster
+persistence:
+  storageClass: <YOUR_STORAGE_CLASS>
+extraEnvs:
+- name: OPENSEARCH_INITIAL_ADMIN_PASSWORD
+  value: "<YOUR_ADMIN_PASSWORD>"

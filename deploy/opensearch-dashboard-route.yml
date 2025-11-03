@@ -1,0 +1,17 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: dashboard
+  namespace: burner-virt-results
+spec:
+  port:
+    targetPort: service
+  to:
+    kind: Service
+    name: burner-dashboard-opensearch-dashboards
+    weight: 100
+  wildcardPolicy: None
+  tls:
+    termination: edge
+  port:
+    targetPort: 5601

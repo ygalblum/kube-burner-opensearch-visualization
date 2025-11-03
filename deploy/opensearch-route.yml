@@ -1,0 +1,14 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: opensearch
+  namespace: burner-virt-results
+spec:
+  port:
+    targetPort: 9200
+  to:
+    kind: Service
+    name: opensearch-cluster-master
+    weight: 100
+  tls:
+    termination: passthrough
