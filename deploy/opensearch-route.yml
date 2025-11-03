@@ -2,7 +2,6 @@ apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
   name: opensearch
-  namespace: burner-virt-results
 spec:
   port:
     targetPort: 9200
